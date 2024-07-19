@@ -7,3 +7,21 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+.main-container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid rebeccapurple;
+}
+
+.outer-container {
+  display: flex;
+  border: 1px solid burlywood;
+}
+
+.inner-container {
+  flex: auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid royalblue;
+}

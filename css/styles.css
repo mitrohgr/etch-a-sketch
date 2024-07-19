@@ -16,12 +16,12 @@ html {
 
 .outer-container {
   display: flex;
-  border: 1px solid burlywood;
+  border: 1px solid whitesmoke;
 }
 
 .inner-container {
   flex: auto;
   width: 30px;
   height: 30px;
-  border: 1px solid royalblue;
+  border: 1px solid whitesmoke;
 }

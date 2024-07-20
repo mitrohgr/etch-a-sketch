@@ -27,3 +27,8 @@ html {
   flex: 1;
   border: 1px solid whitesmoke;
 }
+
+.button-container {
+  text-align: center;
+  margin: 40px;
+}

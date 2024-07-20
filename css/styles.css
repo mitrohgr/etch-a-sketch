@@ -9,19 +9,21 @@ html {
 }
 
 .main-container {
-  width: 500px;
+  width: 600px;
+  display: flex;
+  height: 600px;
   margin: 0 auto;
+  flex-direction: column;
   border: 1px solid rebeccapurple;
 }
 
 .outer-container {
+  flex: 1;
   display: flex;
   border: 1px solid whitesmoke;
 }
 
 .inner-container {
-  flex: auto;
-  width: 30px;
-  height: 30px;
+  flex: 1;
   border: 1px solid whitesmoke;
 }

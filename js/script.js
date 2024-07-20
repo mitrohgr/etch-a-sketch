@@ -18,6 +18,7 @@ modifyButton.addEventListener("click", () => {
 });
 
 function createGrid(gridSize) {
+  mainContainer.replaceChildren();
   for (let i = 0; i < gridSize; i++) {
     const outerContainer = document.createElement("div");
     outerContainer.setAttribute("class", "outer-container");

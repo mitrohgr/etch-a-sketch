@@ -1,21 +1,5 @@
 const mainContainer = document.querySelector(".main-container");
 
-for (let i = 0; i < 16; i++) {
-  const outerContainer = document.createElement("div");
-  outerContainer.setAttribute("class", "outer-container");
-  for (let j = 0; j < 16; j++) {
-    const innerContainer = document.createElement("div");
-    innerContainer.setAttribute("class", "inner-container");
-
-    innerContainer.addEventListener("mouseenter", () => {
-      innerContainer.style.backgroundColor = "black";
-    });
-
-    outerContainer.appendChild(innerContainer);
-  }
-  mainContainer.appendChild(outerContainer);
-}
-
 const modifyButton = document.querySelector(".modify-button");
 
 const DEFAULT_GRID_SIZE = 16;
@@ -30,4 +14,23 @@ modifyButton.addEventListener("click", () => {
       alert("You can only use values from 16 to 99!");
     }
   }
+  createGrid(gridSize);
 });
+
+function createGrid(gridSize) {
+  for (let i = 0; i < gridSize; i++) {
+    const outerContainer = document.createElement("div");
+    outerContainer.setAttribute("class", "outer-container");
+    for (let j = 0; j < gridSize; j++) {
+      const innerContainer = document.createElement("div");
+      innerContainer.setAttribute("class", "inner-container");
+      innerContainer.addEventListener("mouseenter", () => {
+        innerContainer.style.backgroundColor = "black";
+      });
+      outerContainer.appendChild(innerContainer);
+    }
+    mainContainer.appendChild(outerContainer);
+  }  
+}
+
+createGrid(gridSize);

@@ -9,15 +9,20 @@
 
   <body>
     <h1>Etch-A-Sketch</h1>
-    <div class="button-container">
-      <button class="modify-button">Modify grid</button>
-      <fieldset>
-        <legend>Choose your options</legend>
-        <input type="checkbox" id="randomize" name="randomize">
-        <label for="randomize">Randomize</label>
-        <input type="checkbox" id="darkening" name="darkening">
-        <label for="darkening">Darkening</label>
-      </fieldset>
+    <div class="interactive-container">
+      <div class="button-container">
+        <button class="modify-button">Modify grid</button>
+        <button class="erase-button">Erase grid</button>
+      </div>
+      <div class="options-container">
+        <fieldset>
+          <legend>Choose your options</legend>
+          <input type="checkbox" id="randomize" name="randomize">
+          <label for="randomize">Randomize</label>
+          <input type="checkbox" id="darkening" name="darkening">
+          <label for="darkening">Darkening</label>
+        </fieldset>
+      </div>
     </div>
     <div class="main-container"></div>
   </body>

@@ -117,3 +117,14 @@ label {
   cursor: default;
   background-color: white;
 }
+
+.size-container {
+  width: 275px;
+  font-size: 20px;
+  margin: 30px auto;
+  text-align: center;
+  color: rgb(255, 99, 71);
+  border-radius: 50% 20% / 10% 20%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 5px 2px 2px rgba(255, 99, 71, 0.724);
+}

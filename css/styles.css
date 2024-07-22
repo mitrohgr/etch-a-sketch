@@ -27,47 +27,49 @@ h1 {
   box-shadow: 2px 5px 2px 2px rgba(255, 99, 71, 0.724);
 }
 
-.main-container {
+.interactive-container {
+  gap: 32px;
   width: 600px;
   display: flex;
-  height: 600px;
-  margin: 0 auto;
-  flex-direction: column;
-  border: 3px solid rgb(255, 99, 71);
-  box-shadow: 12px 12px 2px 1px rgba(255, 99, 71, 0.724);
-}
-
-.outer-container {
-  flex: 1;
-  display: flex;
-  background-color: black;
-}
-
-.inner-container {
-  flex: 1;
-  background-color: white;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-container {
-  gap: 50px;
-  width: 600px;
+  gap: 16px;
   display: flex;
-  margin: 50px auto;
   text-align: center;
   align-items: center;
-  justify-content: center;  
+  flex-direction: column;
+  justify-content: center; 
 }
 
-.modify-button {
+.options-container {
+  text-align: center;
+}
+
+.modify-button,
+.erase-button {
   border: none;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  padding: 8px 16px;
   border-radius: 10px;
   color: rgb(255, 99, 71);
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 5px 2px 2px rgba(255, 99, 71, 0.724);
+}
+
+.modify-button {
+  padding: 8px 16px;
+}
+
+.erase-button {
+  padding: 8px 20px;
 }
 
 fieldset {
@@ -92,4 +94,26 @@ input[type=checkbox] {
 label {
   font-weight: bolder;
   color: rgb(255, 255, 255);
+}
+
+.main-container {
+  width: 600px;
+  display: flex;
+  height: 600px;
+  margin: 0 auto;
+  flex-direction: column;
+  border: 3px solid rgb(255, 99, 71);
+  box-shadow: 12px 12px 2px 1px rgba(255, 99, 71, 0.724);
+}
+
+.outer-container {
+  flex: 1;
+  display: flex;
+  background-color: black;
+}
+
+.inner-container {
+  flex: 1;
+  cursor: default;
+  background-color: white;
 }

@@ -21,11 +21,13 @@ html {
   flex: 1;
   display: flex;
   border: 1px solid whitesmoke;
+  background-color: black;
 }
 
 .inner-container {
   flex: 1;
   border: 1px solid whitesmoke;
+  background-color: white;
 }
 
 .button-container {

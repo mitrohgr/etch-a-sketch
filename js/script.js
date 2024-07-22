@@ -28,6 +28,17 @@ randomizeBox.addEventListener("change", function (e) {
   }
 });
 
+const darkeningBox = document.querySelector("input[name=darkening");
+
+let darkened = false;
+darkeningBox.addEventListener("change", function (e) {
+  if (e.target.checked) {
+    darkened = true;
+  } else {
+    darkened = false;
+  }
+});
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -44,13 +55,22 @@ function createGrid(gridSize) {
     for (let j = 0; j < gridSize; j++) {
       const innerContainer = document.createElement("div");
       innerContainer.setAttribute("class", "inner-container");
+      
       innerContainer.addEventListener("mouseenter", function (e) {
-        
         if (randomized) {
           innerContainer.style.backgroundColor = `rgb(${getRandomIntInclusive(0, 255)},
           ${getRandomIntInclusive(0, 255)}, ${getRandomIntInclusive(0, 255)})`;
         } else {
-          innerContainer.style.backgroundColor = "black";
+          innerContainer.style.backgroundColor = "orange";
+        }
+
+        if (darkened) {
+          let opacity = parseFloat(window.getComputedStyle(innerContainer).opacity);
+          if (opacity > 0) {
+            opacity -= 0.1;
+          }
+          console.log(opacity);
+          innerContainer.style.opacity = opacity;
         }
       });
       

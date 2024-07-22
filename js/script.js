@@ -47,42 +47,54 @@ eraseButton.addEventListener("click", () => {
 
 const sizeContainer = document.querySelector(".size-container");
 
+function removeExistingGrid() {
+  mainContainer.replaceChildren();
+}
+
+function displayGridSize() {
+  sizeContainer.textContent = `Total grids: ${gridSize} x ${gridSize}`;
+}
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function createGrid(gridSize) {
-  mainContainer.replaceChildren();
-  
-  sizeContainer.textContent = `Total grids: ${gridSize} x ${gridSize}`;
+function randomizeGridColors(e) {
+  if (randomized) {
+    let red = getRandomIntInclusive(0, 255);
+    let green = getRandomIntInclusive(0, 255);
+    let blue = getRandomIntInclusive(0, 255);
+    e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  } else {
+    e.target.style.backgroundColor = "orange";
+  }
+}
 
+function darkenGridColors(e) {
+  if (darkened) {
+    let opacity = parseFloat(window.getComputedStyle(e.target).opacity);
+    if (opacity > 0) {
+      opacity -= 0.1;
+    }
+    e.target.style.opacity = opacity;
+  }
+}
+
+function createGrid(gridSize) {
+  removeExistingGrid();
+  displayGridSize()
   for (let i = 0; i < gridSize; i++) {
     const outerContainer = document.createElement("div");
     outerContainer.setAttribute("class", "outer-container");
-    
     for (let j = 0; j < gridSize; j++) {
       const innerContainer = document.createElement("div");
       innerContainer.setAttribute("class", "inner-container");
-      
       innerContainer.addEventListener("mouseenter", function (e) {
-        if (randomized) {
-          innerContainer.style.backgroundColor = `rgb(${getRandomIntInclusive(0, 255)},
-          ${getRandomIntInclusive(0, 255)}, ${getRandomIntInclusive(0, 255)})`;
-        } else {
-          innerContainer.style.backgroundColor = "orange";
-        }
-
-        if (darkened) {
-          let opacity = parseFloat(window.getComputedStyle(innerContainer).opacity);
-          if (opacity > 0) {
-            opacity -= 0.1;
-          }
-          innerContainer.style.opacity = opacity;
-        }
+        randomizeGridColors(e);
+        darkenGridColors(e);
       });
-      
       outerContainer.appendChild(innerContainer);
     }
     mainContainer.appendChild(outerContainer);

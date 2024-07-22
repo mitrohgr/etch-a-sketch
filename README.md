@@ -48,5 +48,9 @@ Here, I create a browser version of a pretty neat toy (mainly using DOM manipula
 
 ## Acknowledgements
 
++ *No credits* for this project.
 
 ## Contact and Support
+
++ Feel free to contact ***mitrohgr_03505*** for project-related queries.
++ No further feature modifications or improvements will be done to this project.

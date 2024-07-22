@@ -69,7 +69,6 @@ function createGrid(gridSize) {
           if (opacity > 0) {
             opacity -= 0.1;
           }
-          console.log(opacity);
           innerContainer.style.opacity = opacity;
         }
       });

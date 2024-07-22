@@ -45,6 +45,8 @@ eraseButton.addEventListener("click", () => {
   createGrid(gridSize);
 });
 
+const sizeContainer = document.querySelector(".size-container");
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -54,6 +56,8 @@ function getRandomIntInclusive(min, max) {
 function createGrid(gridSize) {
   mainContainer.replaceChildren();
   
+  sizeContainer.textContent = `Total grids: ${gridSize} x ${gridSize}`;
+
   for (let i = 0; i < gridSize; i++) {
     const outerContainer = document.createElement("div");
     outerContainer.setAttribute("class", "outer-container");

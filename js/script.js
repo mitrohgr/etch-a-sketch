@@ -39,6 +39,12 @@ darkeningBox.addEventListener("change", function (e) {
   }
 });
 
+const eraseButton = document.querySelector(".erase-button");
+
+eraseButton.addEventListener("click", () => {
+  createGrid(gridSize);
+});
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);

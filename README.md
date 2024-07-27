@@ -49,6 +49,7 @@ Here, I create a browser version of a pretty neat toy (mainly using DOM manipula
 ## Acknowledgements
 
 + *No credits* for this project.
++ *Credit* for the ***README*** goes to [ritaly's README sheet](https://github.com/ritaly/README-cheatsheet).
 
 ## Contact and Support
 
